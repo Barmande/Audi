@@ -1,0 +1,325 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap');
+
+/* ===== VARIABLES ===== */
+:root {
+    --red: #CC0000;
+    --black: #111111;
+    --white: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray-mid: #E0E0E0;
+    --gray-text: #555555;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --radius: 10px;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gray-light);
+    color: var(--black);
+    direction: ltr;
+    line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--white);
+    padding: 0px 40px 0 40px;
+    border-bottom: 3px solid var(--red);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p strong {
+    color: var(--red);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ===== NAV ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gray-text);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--gray-mid);
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: var(--red);
+    color: var(--white);
+    border-color: var(--red);
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 860px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===== SECTIONS ===== */
+section, article {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--red);
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gray-mid);
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: var(--red);
+    margin: 20px 0 10px 0;
+    font-weight: 600;
+}
+
+/* ===== IMAGES ===== */
+.car-image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 16px 0;
+}
+
+/* ===== DESCRIPTION ===== */
+.car-description {
+    line-height: 1.8;
+    color: var(--gray-text);
+    text-align: justify;
+    max-width: 700px;
+    font-size: 0.95rem;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.88rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+table thead tr,
+table tr:first-child th[colspan] {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-mid);
+}
+
+th {
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--gray-light);
+}
+
+tr:hover {
+    background-color: #FFE5E5;
+}
+
+/* ===== HR ===== */
+hr {
+    border: none;
+    border-top: 2px solid var(--gray-mid);
+    margin: 32px 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+footer textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border-radius: var(--radius);
+    border: 1px solid #444;
+    background-color: #222;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+footer input[type="submit"] {
+    margin-top: 12px;
+    padding: 10px 28px;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+footer input[type="submit"]:hover {
+    background-color: #aa0000;
+}
+
+footer p {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+/* ===== LAST TITLE ===== */
+main > h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--red);
+    letter-spacing: 3px;
+    margin: 20px 0;
+}
+
+/* ===== SCROLL MARGIN ===== */
+[id] {
+    scroll-margin-top: 250px;
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 0 16px 0 16px;
+    }
+
+    header h1 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        margin-bottom: 2px;
+    }
+
+    header p strong {
+        font-size: 0.75rem;
+    }
+
+    nav ul {
+        gap: 4px;
+        padding: 8px 0;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+
+    main {
+        margin: 16px auto;
+        padding: 0 10px;
+    }
+
+    section, article {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 0.95rem;
+    }
+
+    .car-image {
+        height: 180px;
+        max-width: 100%;
+    }
+
+    .car-description {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        font-size: 0.75rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th, td {
+        padding: 6px 8px;
+        white-space: nowrap;
+    }
+
+    footer {
+        padding: 24px 16px;
+    }
+
+    [id] {
+        scroll-margin-top: 160px;
+    }
+}
